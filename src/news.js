@@ -1,15 +1,5 @@
-
-import './App.css';
-
-import Header from './components/Header';
-import Article from './components/Article';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import { useState } from 'react';
-import Aside from "./components/Aside";
-
-const App = () =>{
-  const [newsarr, setArr]= useState([
+const newsarr =
+[
     {
       "id":0,
        "title":"Xitoy Tayvanga harbiy samolyotlar yubordi, u yerdagilar urush xavfi haqida aytishmoqda",
@@ -250,59 +240,5 @@ const App = () =>{
        "show_desc":false,
        "font_style":"normal"
     }
-  ]);
-  const handleDelete =(id)=>{
-    const newArticleArr= newsarr.filter((el)=> el.id !== id);
-    setArr(newArticleArr);
-  };
-
-
-  const newsList = newsarr.map((el) =>{
-   return ( 
-      <Article 
-         key={el.id}
-         id={el.id}
-         url={el.image}
-         title={el.title}
-         description={el.description}
-         category_name={el.category_name}
-         pub_date={el.pub_date}
-         deleteFunction={handleDelete}
-      />
-   )
-  }
-    
-  );
-
-
-
-
-
-
-  return (
-    <div className="wrapper">
-      <Header/>
-      <Navbar/>
-      <section className="content">
-        <div className="row">
-      {/* <Article/> */}
-      <Aside/>
-         {newsList}
-         <Footer/>
-  </div>
-        
-      </section>
-      
-  
-    </div>
-  );
- 
-
-}
-
-export default App;
-
-    
-   
-
-
+]
+export default newsarr;
