@@ -53,8 +53,9 @@
   
 }
 .card{
-  margin-bottom:20px !important;
-  height: 630px !important;
+  margin:20px !important;
+  height: 680px !important;
+
 }
 .nav{
   display: flex;
@@ -104,14 +105,35 @@
 }
 .page{
   text-align: center;
-  margin:30px;
-
+ 
  
 }
+.aside{
+  padding:30px;
+}
+.aside-section {
+  width: 390px;
+}
+.cardss {
+  display: flex;
+  flex-wrap: wrap;
+ 
+  /* overflow: hidden;
+  overflow-y: scroll; */
+
+  /* height: 1300px; */
+}
+
+.card-left {
+  display: flex;
+}
+
 .article-news{
   display: flex;
-  flex-direction: column;
-  padding:30px;
+  /* flex-direction: column; */
+  
+  justify-content: space-between;
+  
 }
 
 
@@ -129,7 +151,7 @@
   display: flex;
   justify-content: start;
   align-items: flex-start;
-  padding:20px;
+  
 }
 .footer-icon{
   margin:20px ;

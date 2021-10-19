@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
 import Aside from "./components/Aside";
+import { Pagination } from 'antd';
+// import "bootstrap/scss/bootstrap";
 
 const App = () =>{
   const [newsarr, setArr]= useState([
@@ -284,10 +286,18 @@ const App = () =>{
       <Header/>
       <Navbar/>
       <section className="content">
-        <div className="row">
-      {/* <Article/> */}
-      <Aside/>
-         {newsList}
+        <div className="card-left">
+     
+          <div className="aside-section"><Aside/></div>
+      
+          <div className="cardss">
+           {newsList}
+
+         </div>
+       
+        </div>
+    <div className="page">
+      <Pagination defaultCurrent={1} total={50} /> 
          <Footer/>
   </div>
         
